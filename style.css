@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
 .header{
     min-height: 100vh;
     width: 100%;
@@ -10,4 +13,84 @@
     background-position: center;
     background-size: cover;
     position: relative;
+}
+nav{
+    display: flex;
+    padding: 3% 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h3{
+    color: aliceblue;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+.nav-menu{
+    flex: 1;
+    text-align: right;
+}
+.nav-menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 12px;
+    position: relative;
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.nav-menu ul li ::after{
+    content: '';
+    width: 0px;
+    height: 5px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    bottom: -5px;
+    transition: .5s;  
+    background-color: rgb(4, 4, 43);
+}
+.nav-menu ul li:hover ::after{
+    width: 100%;
+}
+.profile-image{
+    width: 14%;
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    border-radius: 10%;
+    transform: translate(25% , 20%);
+}
+.title-description{
+    width: 40%;
+    color:rgb(10, 2, 46);
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    
+}
+.title-description h1{
+    font-size: 60px;
+}
+.title-description p{
+    line-height: 30px;
+}
+.title-description a{
+    text-decoration: none;
+    color:honeydew;
+    border: 2px solid whitesmoke;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    padding: 13px 25px;
+    top: 25px;
+    font-size: 15px;
+}
+.title-description a:hover{
+    background:lightseagreen;
+    border: 2px solid black;
+    transition: 2s;
 }
